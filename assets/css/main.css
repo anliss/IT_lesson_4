@@ -1,8 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
-   background: linear-gradient(#128aa7 3%, #14cee1 0%, #ffffff 15%, #41c6d3 0%, #0c739f 80%);
+   background: linear-gradient(#128aa7 4%, #14cee1 0%, #ffffff 17.9%, #41c6d3 0%, #0c739f 80%);
  }
 
-.conteiner {
+.container {
   width: 1000px;
   height: auto;
   background-color: #ffffff;
@@ -42,62 +46,135 @@ padding-right: 30px;
     clear: both;
     float: none;
 }
-.countries img {
-  display: inline-block;
-}
 
-.kolo {
-    display: block;
-    width: 42px;
-    font-size: 10px;
+.countries > ol > li {
+    display: inline-block;
+    padding-top: 22px;
+    width: 55px;
     text-align: center;
-    margin-right: 20px;
+    font-weight: bold;
+    font-size: 10px;
 }
 
-.fon1 {  /* фон для левой колонки (синий) */
-    width: 100%;
-    background: #3d2af0;
-    float: left; /* делаем все обертки плавающими блоками чтобы избежать добавления блока с clear: both; */
-    position: relative; /* чтобы иметь возможность сместить фон */
-    right: 30%; /* обнажаем красный фон для центральной колонки. 30% - ширина центральной колонки */
+.countries > ol > li > a {
+  color: #128aa7;
+
+}
+.line {
+  position: relative;
+  z-index: 10;
 }
 
-.fon2 {/* фон для центральной колонки (красный) */
-    width: 100%;
-    background: #e34456;
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: linear-gradient(#373737, #303030);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+}
+
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+
+ul.menu > li {
     float: left;
     position: relative;
-    right: 40%; /* обнажаем желтый фон для правой колонки. 40% - ширина правой колонки */
+
 }
 
-.fon3 {/* фон для правой колонки (желтый) */
-    width: 100%;
-    background: #e3e244;
-    float: left;
+ul.menu > li > a {
+    display: block;
+    width: 122px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 142px;
+    top: 36px;
+    left: 0;
+    background-color: white;
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+    text-align: left;
+  }
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+
+article:before,
+article:after {
+  content: " ";
+  display: block;
+  clear: both;
+  float: none;
 }
 
 .leftColumn {
-    width: 30%;
+    width: 20%;
     float: left;
-    overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+    overflow: hidden;
     position:relative;
-    left:70%; /* возвращаем колонки с контентом на свои позиции. 70% - сумма смещений оберток fon1 и fon2 */
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #edeef0;
+    border-right: #c7cacf 1px solid;
+    line-height: 22px;
+    color: #424c43;
 }
 
 .centerColumn {
-    width: 30%;
+    width: 56%;
     float: left;
     overflow: hidden;
-    position:relative;
-    left:70%;
 }
 
 .rightColumn {
-    width: 39%;
-    float: left;
+    width: 20%;
+    float: right;
     overflow: hidden;
-    position:relative;
-    left:70%;
+    position: relative;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #edeef0;
+    border-left: #c7cacf 1px solid;
+    line-height: 22px;
+    color: #424c43;
+}
+
+h1 {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #424c43;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 footer {
