@@ -135,35 +135,40 @@ article:after {
   clear: both;
   float: none;
 }
+article {
+  width: 1000px;
+  overflow: hidden;
+}
 
 .leftColumn {
-    width: 20%;
+    width: 195px;
     float: left;
-    overflow: hidden;
-    position:relative;
     padding-left: 15px;
-    padding-bottom: 15px;
-    background-color: #edeef0;
-    border-right: #c7cacf 1px solid;
+    padding-bottom: 20000px;
+    margin-bottom: -20000px;
+    background: #edeef0;
     line-height: 22px;
     color: #424c43;
 }
 
 .centerColumn {
-    width: 56%;
+    width: 578px;
     float: left;
-    overflow: hidden;
+    padding-bottom: 20000px;
+    margin-bottom: -20016px;
+    border-right: #c7cacf 1px solid;
+    border-left: #c7cacf 1px solid;
+    text-align: center;
+
 }
 
 .rightColumn {
-    width: 20%;
+    width: 195px;
     float: right;
-    overflow: hidden;
-    position: relative;
     padding-left: 15px;
-    padding-bottom: 15px;
-    background-color: #edeef0;
-    border-left: #c7cacf 1px solid;
+    padding-bottom: 20000px;
+    margin-bottom: -19990px;
+    background: #edeef0;
     line-height: 22px;
     color: #424c43;
 }
