@@ -1,9 +1,7 @@
-html {
-  height: 100%;
-}
-
 body {
-   background: linear-gradient(#128aa7 4%, #14cee1 0%, #ffffff 17.9%, #41c6d3 0%, #0c739f 80%);
+   background-image: url(../img/bg.jpg);
+   background-repeat: repeat-x;
+   background-color: #0c739f;
  }
 
 .container {
